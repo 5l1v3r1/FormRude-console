@@ -1,0 +1,31 @@
+POST /ajax/serviceDetails HTTP/1.1
+
+Host: formscentral.acrobat.com
+
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:23.0) Gecko/20100101 Firefox/23.0
+
+Accept: application/json, text/javascript, */*
+
+Accept-Language: en-US,en;q=0.5
+
+Accept-Encoding: gzip, deflate
+
+Content-Type: application/json; charset=utf-8
+
+X-Requested-With: XMLHttpRequest
+
+Referer: https://formscentral.acrobat.com/CreateAccount.html
+
+Content-Length: 33
+
+Cookie: mbox=check#true#1378769113|session#1378768991361-193774#1378770913|PC#1378768991361-193774.22_03#1379978653|disable#browser%20timeout#1378772735; s_sq=%5B%5BB%5D%5D; s_sess=%20s_cpc%3D0%3B%20s_cc%3Dtrue%3B%20s_ppv%3D-%252C94%252C94%252C906%3B%20s_sq%3D%3B; s_pers=%20s_fid%3D0151AA3FD68F5FC2-08D4DFA671C4E58F%7C1441841119689%3B%20s_vs%3D1%7C1378770919691%3B%20gpv%3DFormsCentral.Acrobat.com%253ASignUpForAFreeAccount%253ASignUpOnclick%253AEmailCommYes%7C1378770919693%3B%20s_nr%3D1378769119695-New%7C1410305119695%3B; ADC_AppHostUrl=https%3a%2f%2facrobat.com%2f; _ct=true
+
+Connection: keep-alive
+
+Pragma: no-cache
+
+Cache-Control: no-cache
+
+
+
+hostname=formscentral.acrobat.com
