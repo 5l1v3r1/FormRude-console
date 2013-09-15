@@ -16,7 +16,7 @@ module Shell
       require 'readline'
       @history = FormRude::Ui::Console::Shell::History.new
       @file    = File.open(@history.history_file, 'a')
-
+      # TODO : to add the current stack to current context
       @context = Context.new
     end
 
