@@ -11,6 +11,8 @@ module Shell
   class Config
     #include FormRude::Ui::Console::Shell::Commands
 
+    # Test
+
 
     def initialize
       require 'readline'
