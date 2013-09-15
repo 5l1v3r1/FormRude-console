@@ -1,4 +1,3 @@
-#require 'formrude/ui/console/shell/commands'
 
 module FormRude
 module Ui
@@ -9,10 +8,7 @@ module Shell
   # [Config] class a central placeholder for general console configurations
   #
   class Config
-    #include FormRude::Ui::Console::Shell::Commands
-
-    # Test
-
+    include FormRude::Ui::Console::Shell::Commands
 
     def initialize
       require 'readline'
