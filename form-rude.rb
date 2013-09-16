@@ -28,16 +28,14 @@ end
 
 parse = FormRude::Ui::Console::Operations::HTTP::PostParser.new(file)
 
+
 # File summary
-puts "[+] ".green + "File Summary".white
-puts "- ".dark_green + "Post file name: "      + "#{post_file.split('/').last}".bold
-puts "- ".dark_green + "Number of headers: "   + "#{parse.headers.length}".bold + " headers"
-puts "- ".dark_green + "Number of variables: " + "#{parse.body.length}".bold    + " variables"
+puts "[+] ".light_green + "File Summary".white
+puts " - ".green + "Post file name: "      + "#{post_file.split('/').last}".bold
+puts " - ".green + "Number of headers: "   + "#{parse.headers.length}".bold + " headers"
+puts " - ".green + "Number of variables: " + "#{parse.body.length}".bold    + " variables"
 puts ""
 
-FormRude::Ui::Console::Shell::Prompt.new.start
-
-
-
+FormRude::Ui::Console::Shell::Prompt.new(parse).start
 
 

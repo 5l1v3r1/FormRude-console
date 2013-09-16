@@ -15,9 +15,28 @@ module Shell
     attr_accessor :current_context
     attr_accessor :parent_context
 
-    def initialize
+    def initialize#(current_context, parent_context)
       self.current_context = []
       self.parent_context  = []
+    end
+
+    def change_context
+
+    end
+
+
+    #
+    # Will need it in tab completion, later
+    #
+    def current_context_to_array
+      case
+        when self.current_context.kind_of?(Array)
+          self.current_context.map { |item| item.keys }.join(' ') # TODO to be tested with join "\n"
+        when self.current_context.kindof?(Hash)
+          self.current_context.keys.join(' ')
+        else
+          self.current_context.current_context_to_array
+      end
     end
 
     def item

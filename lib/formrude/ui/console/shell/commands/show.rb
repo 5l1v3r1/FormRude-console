@@ -10,12 +10,17 @@ module Shell
 module Commands
   class Show
 
-    def initialize
+    def initialize(context)
+      @context = context
+
       @hrows = []
       @brows = []
       @frows = []
     end
 
+    #
+    # Shows post headers in table
+    #
     def show_headers
       @context.current_context[0][:headers].map do |hash|
         hash.each do |_key , _val|
@@ -29,6 +34,9 @@ module Commands
       #htable = Terminal::Table.new(:title => "Headers".bold.underline, :headings => ["Header".bold, "Value".bold], :rows => @hrows)
     end
 
+    #
+    # Shows post body in table
+    #
     def show_body
       @context.current_context[0][:body].map do |hash|
         hash.each do |_key , _val|
@@ -42,6 +50,9 @@ module Commands
       #btable = Terminal::Table.new(:title => "Body".bold.underline, :headings => ["Variable".bold, "Value".bold], :rows => @brows)
     end
 
+    #
+    # Shows the full post headers & body in table
+    #
     def show_full
       @hrows << [show_headers , show_body]
     end
@@ -49,14 +60,22 @@ module Commands
     def action(value)
       value = nil if value == "show"
 
+      tables =
+          [
+              Terminal::Table.new(:title => "Headers".bold.underline, :headings => ["Header".bold, "Value".bold], :rows => @hrows),
+              Terminal::Table.new(:title => "Body".bold.underline, :headings => ["Variable".bold, "Value".bold], :rows => @brows),
+              Terminal::Table.new(:title => "Full post".bold.underline, :headings => ["Variable".bold, "Value".bold], :rows => @frows)
+          ]
+
       case
         when value == "headers"
-          puts htable = Terminal::Table.new(:title => "Headers".bold.underline, :headings => ["Header".bold, "Value".bold], :rows => @hrows)
+          puts tables[0]
         when value == "body"
-          puts btable = Terminal::Table.new(:title => "Body".bold.underline, :headings => ["Variable".bold, "Value".bold], :rows => @brows)
+          puts tables[1]
         when value == "full_post"
-          puts htable = Terminal::Table.new(:title => "Full post".bold.underline, :headings => ["Value".bold, "Value".bold], :rows => @frows)
+          puts tables[2]
         else
+          # TODO check current context if in body then show shows the body, if in headers then show headers and so on..
           pp @context.current_context
       end
 

@@ -1,7 +1,7 @@
 
-require_list = Dir.glob("lib/formrude/ui/console/commands/*.rb").map {|lib| lib.split("/").last.gsub(".rb" , "")}
+require_list = Dir.glob("lib/formrude/ui/console/shell/commands/*.rb").map {|lib| lib.split("/").last.gsub(".rb" , "")}
 require_list.each do |lib|
-  require "lib/formrude/ui/console/commands/#{lib}"
+  require "formrude/ui/console/shell/commands/#{lib}"
 end
 
 
@@ -17,13 +17,22 @@ module Commands
   class CommandsCore
 
     def initialize
-
+        @show = Show.new(nil)
     end
 
 
-    def cmd_show
+    def cmd_show(cmd)
+        @show.action(cmd)
+    end
+
+    def cmd_use(cmd)
 
     end
+
+    def cmd_back(cmd=nil)
+      exit 1
+    end
+
 
   end
 
