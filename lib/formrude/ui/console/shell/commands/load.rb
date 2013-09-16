@@ -56,6 +56,8 @@ module Commands
       begin
         if file_path and File.exists?(file_path)
           file = File.read(file_path)
+        elsif file_path == "load"
+          puts "[!] ".yellow.bold + "Please mention post file.\n"
         end
 
         file_summary(file , file_path)

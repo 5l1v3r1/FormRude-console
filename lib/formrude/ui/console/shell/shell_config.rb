@@ -53,7 +53,7 @@ module Shell
         if Readline.line_buffer =~ /help.*\s+/i
             Help.new.sub_cmd_ary.grep(/^#{Regexp.escape(s.sub(%r{^help\s+}i, ''))}/i) { |subs| "help #{subs}" }
         elsif Readline.line_buffer =~ /load.*\s+/i
-          ::Readline.completion_proc = nil # Dir.entries #Load.new.sub_cmd_ary.grep(/^#{Regexp.escape(s.sub(%r{^load\s+}i, ''))}/i) { |subs| ::Readline.completion_proc = nil }
+          p ::Readline.completion_proc = nil # Dir.entries #Load.new.sub_cmd_ary.grep(/^#{Regexp.escape(s.sub(%r{^load\s+}i, ''))}/i) { |subs| ::Readline.completion_proc = nil }
           #p  Readline.line_buffer.split.last
         elsif Readline.line_buffer =~ /show.*\s+/i
             Show.new.sub_cmd_ary.grep(/^#{Regexp.escape(s.sub(%r{^show\s+}i, ''))}/i) { |subs| "show #{subs}" }
