@@ -1,7 +1,7 @@
 #
 #
 #
-
+require 'terminal-table'
 
 module FormRude
 module Ui
@@ -10,12 +10,40 @@ module Shell
 module Commands
   class Show
 
+    attr_accessor :sub_cmd_ary
+
     def initialize(context)
+      self.sub_cmd_ary = commands.keys.sort
       @context = context
 
       @hrows = []
       @brows = []
       @frows = []
+    end
+
+    #
+    # Contains command information
+    # @return [Hash] {command => Description}
+    #
+    def self.info
+      {'show' => 'Displays variables & values of a given type, or the full post'}
+    end
+
+    # Command usage
+    def self.usage
+      puts %Q{Usage: show [headers|body|full_post]}
+    end
+
+    #
+    # A hash of inner commands in show
+    # The hash keys: all, exploits, @param[payloads], encoders, wiki
+    #
+    def commands
+      {
+          'headers'   => 'Show post headers.',
+          'body'      => 'Show post body.',
+          'full_post' => 'Show full post, headers & body.'
+      }
     end
 
     #
@@ -57,6 +85,9 @@ module Commands
       @hrows << [show_headers , show_body]
     end
 
+    #
+    # Just what the command use to do
+    #
     def action(value)
       value = nil if value == "show"
 
@@ -81,7 +112,8 @@ module Commands
 
     end
 
-  end
+  end  # Show
+
 end # Commands
 end # Shell
 end # Console

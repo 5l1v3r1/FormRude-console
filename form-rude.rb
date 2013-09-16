@@ -17,25 +17,26 @@ require 'pp'
 
 
 
-post_file = ARGV[0]
-if post_file and File.exists?(post_file)
-  file = File.read(post_file)
-else
-  puts "[!] ".red.bold + "error: you must provide a post file as an argument"
-  puts "ex. " + "ruby #{$PROGRAM_NAME.split("/").last}" + "post-file.txt"
-  exit 1
-end
+#post_file = ARGV[0]
+#if post_file and File.exists?(post_file)
+#  file = File.read(post_file)
+#else
+#  puts "[!] ".red.bold + "error: you must provide a post file as an argument"
+#  puts "ex. " + "ruby #{$PROGRAM_NAME.split("/").last}" + "post-file.txt"
+#  exit 1
+#end
 
-parse = FormRude::Ui::Console::Operations::HTTP::PostParser.new(file)
+#parse = FormRude::Ui::Console::Operations::HTTP::PostParser.new(file)
+#
+#
+## File summary
+#puts "[+] ".light_green + "File Summary".white
+#puts " - ".green + "Post file name: "      + "#{post_file.split('/').last}".bold
+#puts " - ".green + "Number of headers: "   + "#{parse.headers.length}".bold + " headers"
+#puts " - ".green + "Number of variables: " + "#{parse.body.length}".bold    + " variables"
+#puts ""
 
-
-# File summary
-puts "[+] ".light_green + "File Summary".white
-puts " - ".green + "Post file name: "      + "#{post_file.split('/').last}".bold
-puts " - ".green + "Number of headers: "   + "#{parse.headers.length}".bold + " headers"
-puts " - ".green + "Number of variables: " + "#{parse.body.length}".bold    + " variables"
-puts ""
-
-FormRude::Ui::Console::Shell::Prompt.new(parse).start
+#FormRude::Ui::Console::Shell::Prompt.new(parse).start
+FormRude::Ui::Console::Shell::Prompt.new.start
 
 

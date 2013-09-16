@@ -16,8 +16,8 @@ module Shell
     attr_accessor :parent_context
 
     def initialize#(current_context, parent_context)
-      self.current_context = []
-      self.parent_context  = []
+      p self.current_context = []
+      p self.parent_context  = []
     end
 
     def change_context

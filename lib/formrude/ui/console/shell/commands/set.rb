@@ -1,15 +1,14 @@
-#
-#
-#
+
+
 
 
 module FormRude
-module UI
+module Ui
 module Console
 module Shell
 module Commands
 
-  class Use
+  class Set
     attr_accessor :sub_cmd_ary
 
     def initialize
@@ -21,12 +20,12 @@ module Commands
     # @return [Hash] {command => Description}
     #
     def self.info
-      {'use' => 'Selects a type by name'}
+      {'set' => 'Sets a variable to a value'}
     end
 
+    # Command usage
     def self.usage
-      puts "Usage: use module_name\n\n"
-      puts "The use command is used to interact with a module of a given name.\n\n"
+      puts %Q{Usage: set option_name}
     end
 
     #
@@ -36,8 +35,8 @@ module Commands
     def commands
 
       {
-          'headers' => 'Show all available exploits.',
-          'body'    => 'Show all available encoders.'
+          'TODO' => "This one shout take its sub commands from current(headers/body) variables and the key value should be the command description
+                      This one should depend on current context"
       }
 
     end
@@ -47,10 +46,9 @@ module Commands
     #
     def action
       puts "use command!\n\n"
-      puts "\n"
     end
 
-  end # Use
+  end # Set
 
 end # Commands
 end # Shell

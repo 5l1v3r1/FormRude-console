@@ -11,10 +11,9 @@ module Shell
 
     include FormRude::Ui::Console::Prints::Decoration
 
-    def initialize(post)
-      @post = post
-      @shell_config = FormRude::Ui::Console::Shell::Config.new
-      @shell_config.activity_stack(@post.parse, nil)
+    def initialize#(post)
+      #@post = post
+      @shell_config = Config.new
     end
 
     #
@@ -26,11 +25,10 @@ module Shell
         while true
           line = ""
 
+          @shell_config.tab_completion
           line = ::Readline.readline('FormRude'.white + ' -> '.red , true)
           @shell_config.history(line)
           @shell_config.run_command(line)
-
-          pp @shell_config.activity_stack(line,self)
 
         end
 
