@@ -16,27 +16,29 @@ module Commands
   #
   class CommandsCore
 
+    include FormRude::Ui::Console::Prints::Decoration
+
     def initialize#(context)
-      #@context = context
-      #@help = Help.new
+      pp @context = FormRude::Ui::Console::Shell::Context.new
       @load = Load.new
       @show = Show.new(nil)
       @exit = Exit.new
     end
 
     def cmd_load(path)
-      @load.action(path)
+      @load.action(path.last)
     end
 
-    def cmd_show(cmd)
-      @show.action(cmd)
+    def cmd_show(*cmd)
+      pp @show.action(cmd)
+      pp @context.send(@show.action(cmd))
     end
 
-    def cmd_use(cmd)
+    def cmd_use(*cmd)
 
     end
 
-    def cmd_set(cmd)
+    def cmd_set(*cmd)
 
     end
 
@@ -45,8 +47,7 @@ module Commands
     end
 
     def cmd_exit(cmd=nil)
-      puts "See you l8r!".bold
-      exit 1
+      @exit.action
     end
 
 

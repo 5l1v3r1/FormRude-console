@@ -11,16 +11,16 @@ module Shell
   #
   class Config
 
+    include FormRude::Ui::Console::Prints::Decoration
     include FormRude::Ui::Console::Shell::Commands
 
     def initialize
       require 'readline'
       @history = FormRude::Ui::Console::Shell::History.new
       @file    = File.open(@history.history_file, 'a')
-      pp @commandsCore = CommandsCore.new
+      pp "cmdcore", @commandsCore = CommandsCore.new
       # TODO : to add the current stack to current context
-      #@context = Context.new
-      #@commandsCore = CommandsCore.new(@context)
+
     end
 
     #
@@ -33,14 +33,23 @@ module Shell
     #
     # Send command to command call in CommandsCore be executed
     #
-    def run_command(command)
+    def run_command(cmd)
+      cmd = cmd.split
+      if @commandsCore.respond_to?("cmd_#{cmd.first}")  # Check if entered command exists in CommandsCore
+        @commandsCore.send("cmd_#{cmd.first}", cmd[1..-1]) # Send [Arry] of argument(s) to the command - he will handle it
 
-      pp command = command.split
-      @commandsCore.cmd_load(command.last)
+        history(*cmd.join(' ')) # Ensure that only correct commands are stored in the history file
+      elsif cmd.empty?
+        # Do nothing
+      else
+        puts_err "#{cmd.first}: Command not found!"
+      end
 
     end
 
-
+    #
+    # Tab completion
+    #
     MAIN = ['help', 'load']
     def tab_completion
       ::Readline.completion_append_character = ' '
@@ -53,7 +62,7 @@ module Shell
         if Readline.line_buffer =~ /help.*\s+/i
             Help.new.sub_cmd_ary.grep(/^#{Regexp.escape(s.sub(%r{^help\s+}i, ''))}/i) { |subs| "help #{subs}" }
         elsif Readline.line_buffer =~ /load.*\s+/i
-          p ::Readline.completion_proc = nil # Dir.entries #Load.new.sub_cmd_ary.grep(/^#{Regexp.escape(s.sub(%r{^load\s+}i, ''))}/i) { |subs| ::Readline.completion_proc = nil }
+          ::Readline.completion_proc = nil # Dir.entries #Load.new.sub_cmd_ary.grep(/^#{Regexp.escape(s.sub(%r{^load\s+}i, ''))}/i) { |subs| ::Readline.completion_proc = nil }
           #p  Readline.line_buffer.split.last
         elsif Readline.line_buffer =~ /show.*\s+/i
             Show.new.sub_cmd_ary.grep(/^#{Regexp.escape(s.sub(%r{^show\s+}i, ''))}/i) { |subs| "show #{subs}" }

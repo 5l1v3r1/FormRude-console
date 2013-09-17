@@ -27,7 +27,7 @@ module Shell
 
           @shell_config.tab_completion
           line = ::Readline.readline('FormRude'.white + ' -> '.red , true)
-          @shell_config.history(line)
+          #@shell_config.history(line) # Moved to @shell_config_run_command to ensure that only correct commands are stored in the history
           @shell_config.run_command(line)
 
         end

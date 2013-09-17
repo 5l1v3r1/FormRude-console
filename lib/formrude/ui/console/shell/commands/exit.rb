@@ -41,7 +41,7 @@ module Commands
     # Just what the command use to do
     #
     def action
-      puts "See you soon ;)\n\n"
+      puts "See you l8r!".bold
       exit
     end
 

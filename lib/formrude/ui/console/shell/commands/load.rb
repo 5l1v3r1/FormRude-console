@@ -38,13 +38,13 @@ module Commands
     end
 
     def file_summary(file, file_path)
-      parse = FormRude::Ui::Console::Operations::HTTP::PostParser.new(file)
+      @@parse = FormRude::Ui::Console::Operations::HTTP::PostParser.new(file)
 
       # File summary
       puts "[+] ".light_green + "File Summary".white
       puts " - ".green + "Post file name: "      + "#{file_path.split('/').last}".bold
-      puts " - ".green + "Number of headers: "   + "#{parse.headers.length}".bold + " headers"
-      puts " - ".green + "Number of variables: " + "#{parse.body.length}".bold    + " variables"
+      puts " - ".green + "Number of headers: "   + "#{@@parse.headers.length}".bold + " headers"
+      puts " - ".green + "Number of variables: " + "#{@@parse.body.length}".bold    + " variables"
       puts ""
     end
 
@@ -64,8 +64,8 @@ module Commands
       rescue
         puts "[!] ".red.bold + "#{file_path}".underline + ": No such file!\n\n"
       end
-
-      return file
+      pp @@parse
+      return @@parse
     end
 
   end # Load
