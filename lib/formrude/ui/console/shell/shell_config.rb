@@ -36,13 +36,13 @@ module Shell
     def run_command(cmd)
       cmd = cmd.split
       if @commandsCore.respond_to?("cmd_#{cmd.first}")  # Check if entered command exists in CommandsCore
-        @commandsCore.send("cmd_#{cmd.first}", cmd[1..-1]) # Send [Arry] of argument(s) to the command - he will handle it
-
-        history(*cmd.join(' ')) # Ensure that only correct commands are stored in the history file
+        @commandsCore.send("cmd_#{cmd.first}", cmd[1..-1]) # Send [Array] of argument(s) to the command - commands will handle it
+        #history(*cmd.join(' ')) # Ensure that only correct commands are stored in the history file
       elsif cmd.empty?
         # Do nothing
       else
         puts_err "#{cmd.first}: Command not found!"
+        return false
       end
 
     end

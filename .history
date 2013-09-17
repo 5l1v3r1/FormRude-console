@@ -1,2 +1,3 @@
-load
 load posts/post1.txt
+load posts/post3.txt
+load posts/post2.txt

@@ -64,8 +64,8 @@ module Commands
       rescue
         puts "[!] ".red.bold + "#{file_path}".underline + ": No such file!\n\n"
       end
-      pp @@parse
-      return @@parse
+      pp @@parse.parse
+      return @@parse.parse
     end
 
   end # Load

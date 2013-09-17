@@ -30,8 +30,7 @@ module Commands
     end
 
     def cmd_show(*cmd)
-      pp @show.action(cmd)
-      pp @context.send(@show.action(cmd))
+      @context.send(@show.action(cmd))
     end
 
     def cmd_use(*cmd)
