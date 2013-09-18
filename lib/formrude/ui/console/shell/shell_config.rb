@@ -18,7 +18,7 @@ module Shell
       require 'readline'
       @history = FormRude::Ui::Console::Shell::History.new
       @file    = File.open(@history.history_file, 'a')
-      pp "cmdcore", @commandsCore = CommandsCore.new
+      @commandsCore = CommandsCore.new
       # TODO : to add the current stack to current context
 
     end
@@ -35,8 +35,10 @@ module Shell
     #
     def run_command(cmd)
       cmd = cmd.split
-      if @commandsCore.respond_to?("cmd_#{cmd.first}")  # Check if entered command exists in CommandsCore
-        @commandsCore.send("cmd_#{cmd.first}", cmd[1..-1]) # Send [Array] of argument(s) to the command - commands will handle it
+      # Check if entered command exists in CommandsCore
+      if @commandsCore.respond_to?("cmd_#{cmd.first}")
+        # Send [Array] of argument(s) -w/out cmd- to the command - command will handle it
+        @commandsCore.send("cmd_#{cmd.first}", cmd[1..-1])
         #history(*cmd.join(' ')) # Ensure that only correct commands are stored in the history file
       elsif cmd.empty?
         # Do nothing
@@ -44,7 +46,6 @@ module Shell
         puts_err "#{cmd.first}: Command not found!"
         return false
       end
-
     end
 
     #

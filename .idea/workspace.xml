@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/commands.rb" line="33" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f588edbc-f6f3-468c-9136-f7666fb89c22" name="Default" comment="" />
     <ignored path="FormRude.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/shell_core.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379451254716" ignored="false" />
-    <file path="/context.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379445986996" ignored="false" />
+    <file path="/context.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379453017905" ignored="false" />
     <file path="/help.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379350012553" ignored="false" />
     <file path="/exit.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379109128666" ignored="false" />
     <file path="/colorize.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379124662612" ignored="false" />
@@ -17,13 +20,13 @@
     <file path="/prints.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379201646460" ignored="false" />
     <file path="/form-rude.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379344403846" ignored="false" />
     <file path="/temp.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379202944444" ignored="false" />
-    <file path="/commands.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379450665213" ignored="false" />
+    <file path="/commands.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379466331645" ignored="false" />
     <file path="/http.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379367432726" ignored="false" />
-    <file path="/show.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379346532476" ignored="false" />
+    <file path="/show.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379465793702" ignored="false" />
     <file path="/use.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379346422225" ignored="false" />
     <file path="/back.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379349014976" ignored="false" />
     <file path="/operations.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379201625039" ignored="false" />
-    <file path="/shell_config.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379451126350" ignored="false" />
+    <file path="/shell_config.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379451838023" ignored="false" />
     <file path="/a.rxml" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379161188150" ignored="false" />
     <file path="/decoration.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379200603391" ignored="false" />
     <file path="/Dummy.txt" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379344728806" ignored="false" />
@@ -31,9 +34,9 @@
     <file path="$PROJECT_DIR$/../xss-bkb/xss-sploit-ken-example_07-09-2013/lib/xss/ui/console/shell/shell_config.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379345066653" ignored="false" />
     <file path="/set.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379347024788" ignored="false" />
     <file path="/load_post.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379347518580" ignored="false" />
-    <file path="/load.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379450937792" ignored="false" />
+    <file path="/load.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379462304391" ignored="false" />
     <file path="$PROJECT_DIR$/../xss-bkb/xss-sploit-ken-example_07-09-2013/lib/xss/ui/console/shell/commands/help.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379350033824" ignored="false" />
-    <file path="$PROJECT_DIR$/../XSql-BruteForce/xsql-bruteforce.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379380324726" ignored="false" />
+    <file path="$PROJECT_DIR$/../XSql-BruteForce/xsql-bruteforce.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379452460662" ignored="false" />
     <file path="/xsql-bruteforce.rb" changelist="f588edbc-f6f3-468c-9136-f7666fb89c22" time="1379380324302" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +53,9 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="FormRude" />
+    <favorites_list name="FormRude">
+      <favorite_root url="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/exit.rb" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
   </component>
   <component name="FileEditorManager">
     <leaf>
@@ -72,37 +77,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shell_config.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="shell_config.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/shell_config.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="23" selection-start="1084" selection-end="1184" vertical-scroll-proportion="0.3803132">
+            <state line="20" column="6" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="commands.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/commands.rb">
+      <file leaf-file-name="load.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/load.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="22" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/show.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="33" selection-start="201" selection-end="209" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="context.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/context/context.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="18" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
+            <state line="42" column="18" selection-start="557" selection-end="567" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -117,19 +104,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="load.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/load.rb">
+      <file leaf-file-name="decoration.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/prints/decoration.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="26" selection-start="1488" selection-end="1515" vertical-scroll-proportion="0.0">
+            <state line="26" column="16" selection-start="466" selection-end="474" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="decoration.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/prints/decoration.rb">
+      <file leaf-file-name="commands.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/commands.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="16" selection-start="466" selection-end="474" vertical-scroll-proportion="0.0">
+            <state line="36" column="88" selection-start="928" selection-end="928" vertical-scroll-proportion="0.54362416">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/show.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="91" column="6" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="context.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/context/context.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="27" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -145,7 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/show.rb" />
         <option value="$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/set.rb" />
         <option value="$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/load_post.rb" />
         <option value="$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/back.rb" />
@@ -155,12 +159,13 @@
         <option value="$PROJECT_DIR$/lib/formrude/ui/console.rb" />
         <option value="$PROJECT_DIR$/lib/formrude/ui/console/shell.rb" />
         <option value="$PROJECT_DIR$/lib/formrude/ui/console/operations/http.rb" />
-        <option value="$PROJECT_DIR$/lib/formrude/ui/console/context/context.rb" />
         <option value="$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/exit.rb" />
-        <option value="$PROJECT_DIR$/lib/formrude/ui/console/shell/commands.rb" />
-        <option value="$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/load.rb" />
         <option value="$PROJECT_DIR$/lib/formrude/ui/console/shell/shell_core.rb" />
         <option value="$PROJECT_DIR$/lib/formrude/ui/console/shell/shell_config.rb" />
+        <option value="$PROJECT_DIR$/lib/formrude/ui/console/context/context.rb" />
+        <option value="$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/load.rb" />
+        <option value="$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/show.rb" />
+        <option value="$PROJECT_DIR$/lib/formrude/ui/console/shell/commands.rb" />
       </list>
     </option>
   </component>
@@ -644,21 +649,21 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1398079" sideWeight="0.6710098" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3997833" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3995657" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -724,13 +729,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="39" selection-start="6" selection-end="53" vertical-scroll-proportion="0.01901566">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="39" selection-start="44" selection-end="44" vertical-scroll-proportion="0.01901566">
@@ -766,6 +764,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/exit.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="30" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/back.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="15" selection-start="569" selection-end="569" vertical-scroll-proportion="0.6767338">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form-rude.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="17" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/shell_core.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/shell_config.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="6" selection-start="472" selection-end="472" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/load.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="18" selection-start="557" selection-end="567" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/use.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="38" selection-start="176" selection-end="180" vertical-scroll-proportion="0.0">
@@ -782,56 +822,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/context/context.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="18" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/form-rude.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="17" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/exit.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="30" selection-start="673" selection-end="673" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/commands.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="22" selection-start="679" selection-end="679" vertical-scroll-proportion="0.0">
+        <state line="24" column="27" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/show.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="33" selection-start="201" selection-end="209" vertical-scroll-proportion="0.0">
+        <state line="91" column="6" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/commands/load.rb">
+    <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/commands.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="26" selection-start="1488" selection-end="1515" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/shell_core.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="607" selection-end="607" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/formrude/ui/console/shell/shell_config.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="23" selection-start="1084" selection-end="1184" vertical-scroll-proportion="0.3803132">
+        <state line="36" column="88" selection-start="928" selection-end="928" vertical-scroll-proportion="0.54362416">
           <folding />
         </state>
       </provider>

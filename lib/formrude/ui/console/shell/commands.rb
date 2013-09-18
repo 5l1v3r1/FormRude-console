@@ -19,18 +19,25 @@ module Commands
     include FormRude::Ui::Console::Prints::Decoration
 
     def initialize#(context)
-      pp @context = FormRude::Ui::Console::Shell::Context.new
+      @context = FormRude::Ui::Console::Shell::Context.new
       @load = Load.new
-      @show = Show.new(nil)
+      @show = Show.new
+      @back = Back.new
       @exit = Exit.new
     end
 
     def cmd_load(path)
       @load.action(path.last)
+      @context.current_context = @load.post_parse
     end
 
-    def cmd_show(*cmd)
-      @context.send(@show.action(cmd))
+    def cmd_show(cmd)
+      # TODO : MAKE SURE THAT THE POST FILE IS LOADED
+      if  @context.current_context.empty?
+        puts "[!] ".red + "Post file is not loaded. please use 'load' command to load it"
+      else
+        @show.action(@context.current_context, cmd.last)
+      end
     end
 
     def cmd_use(*cmd)
@@ -42,7 +49,7 @@ module Commands
     end
 
     def cmd_back(cmd=nil)
-      #exit 1
+      @back.action
     end
 
     def cmd_exit(cmd=nil)

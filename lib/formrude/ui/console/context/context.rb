@@ -20,8 +20,10 @@ module Shell
       p "parent" , self.parent_context  = []
     end
 
-    def change_context
-
+    def change_context(context = nil)
+      if context == "back"
+        self.parent_context
+      end
     end
 
 
