@@ -10,14 +10,10 @@ module Shell
 module Commands
   class Show
 
-    attr_accessor :sub_cmd_ary , :context
+    attr_accessor :sub_cmd_ary , :current_context
 
     def initialize
       self.sub_cmd_ary = commands.keys.sort
-
-      @hrows = []
-      @brows = []
-      @frows = []
     end
 
     #
@@ -49,68 +45,78 @@ module Commands
     # Shows post headers in table
     #
     def show_headers
-      context[0][:headers].map do |hash|
+      hrows = []
+      current_context[0][:headers].map do |hash|
         hash.each do |_key , _val|
           _val = _val.scan(/.{100}/).join("\n") if _val.size > 150    # This line To fix table layout
 
-          @hrows << ["#{_key}".green , "#{_val}".white]
-          @hrows << :separator
+          hrows << ["#{_key}".green , "#{_val}".white]
+          hrows << :separator
         end
       end
 
-      #htable = Terminal::Table.new(:title => "Headers".bold.underline, :headings => ["Header".bold, "Value".bold], :rows => @hrows)
+      return hrows
     end
 
     #
     # Shows post body in table
     #
     def show_body
-      context[0][:body].map do |hash|
+      brows = []
+      current_context[0][:body].map do |hash|
         hash.each do |_key , _val|
           _val = _val.scan(/.{100}/).join("\n") if _val.size > 150    # This line To fix table layout
 
-          @brows << ["#{_key}".green, "#{_val}".white]
-          @brows << :separator
+          brows << ["#{_key}".green, "#{_val}".white]
+          brows << :separator
         end
       end
 
-      #btable = Terminal::Table.new(:title => "Body".bold.underline, :headings => ["Variable".bold, "Value".bold], :rows => @brows)
+      return brows
     end
 
     #
     # Shows the full post headers & body in table
     #
     def show_full
-      @hrows << [show_headers , show_body]
+      frows = []
+      frows << show_headers
+      #frows << show_body
+
+      return frows
     end
+
 
     #
     # Just what the command use to do
     #
-    def action(context, value=nil)
-      self.context = context
-
-      show_headers
-      show_body
-      show_full
+    def action(current_context, cmd_arg=nil)
+      self.current_context = current_context
 
       tables =
-          [
-              Terminal::Table.new(:title => "Headers".bold.underline, :headings => ["Header".bold, "Value".bold], :rows => @hrows),
-              Terminal::Table.new(:title => "Body".bold.underline, :headings => ["Variable".bold, "Value".bold], :rows => @brows),
-              Terminal::Table.new(:title => "Full post".bold.underline, :headings => ["Variable".bold, "Value".bold], :rows => @frows)
-          ]
+          {
+           "headers" =>
+               Terminal::Table.new(
+                  :title    => "Headers".bold.underline,
+                  :headings => ["Header".bold, "Value".bold],
+                  :rows     => show_headers),
+           "body" =>
+               Terminal::Table.new(
+                  :title    => "Body".bold.underline,
+                  :headings => ["Variable".bold, "Value".bold],
+                  :rows     => show_body),
+           "full_post" =>
+               Terminal::Table.new(
+                  :title    => "Full post".bold.underline,
+                  :headings => ["Variable".bold, "Value".bold],
+                  :rows     => show_full)
+          }
 
-      case
-        when value == "headers"
-          puts tables[0]
-        when value == "body"
-          puts tables[1]
-        when value == "full_post"
-          puts tables[2]
-        else
-          # TODO check current context if in body then show shows the body, if in headers then show headers and so on..
-          #pp @context
+      if cmd_arg == "#{cmd_arg}"
+        puts tables["#{cmd_arg}"]
+      else
+        cmd_arg = current_context
+        puts tables["#{cmd_arg}"]
       end
 
     end

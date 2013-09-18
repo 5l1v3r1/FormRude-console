@@ -28,7 +28,7 @@ module Commands
 
     def cmd_load(path)
       @load.action(path.last)
-      @context.current_context = @load.post_parse
+      @context.current_context = @load.post_parse    # Initiation for current context value
     end
 
     def cmd_show(cmd)
