@@ -39,7 +39,6 @@ module Shell
       if @commandsCore.respond_to?("cmd_#{cmd.first}")
         # Send [Array] of argument(s) -w/out cmd- to the command - command will handle it
         @commandsCore.send("cmd_#{cmd.first}", cmd[1..-1])
-        #history(*cmd.join(' ')) # Ensure that only correct commands are stored in the history file
       elsif cmd.empty?
         # Do nothing
       else

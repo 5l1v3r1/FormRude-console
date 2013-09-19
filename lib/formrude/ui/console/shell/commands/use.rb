@@ -2,9 +2,8 @@
 #
 #
 
-
 module FormRude
-module UI
+module Ui
 module Console
 module Shell
 module Commands

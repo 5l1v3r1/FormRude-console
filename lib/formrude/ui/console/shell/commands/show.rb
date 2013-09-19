@@ -8,6 +8,7 @@ module Ui
 module Console
 module Shell
 module Commands
+
   class Show
 
     attr_accessor :sub_cmd_ary , :current_context

@@ -22,6 +22,8 @@ module Commands
       @context = FormRude::Ui::Console::Shell::Context.new
       @load = Load.new
       @show = Show.new
+      @use  = Use.new
+      @set  = Set.new
       @back = Back.new
       @exit = Exit.new
     end
@@ -41,7 +43,7 @@ module Commands
     end
 
     def cmd_use(*cmd)
-
+      @use.action
     end
 
     def cmd_set(*cmd)
