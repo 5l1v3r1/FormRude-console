@@ -27,7 +27,7 @@ module Commands
 
     # Command usage
     def self.usage
-      puts %Q{Just type exit, to exit :)}
+      puts "Usage:\nload path/post_file"
     end
 
     #
@@ -40,8 +40,12 @@ module Commands
     #
     #
     #
-    def post_parse
-      @parse.parse
+    def parse
+      begin
+        @parse.parse
+      rescue
+        puts "[!] ".yellow.bold + "Please mention post file."
+      end
     end
 
     #
@@ -67,12 +71,12 @@ module Commands
         if file_path and File.exists?(file_path)
           file = File.read(file_path)
         elsif file_path == "load"
-          puts "[!] ".yellow.bold + "Please mention post file.\n"
+          puts "[!] ".yellow.bold + "Please mention post file."
         end
 
         file_summary(file , file_path)
       rescue
-        puts "[!] ".red.bold + "#{file_path}".underline + ": No such file!\n\n"
+        puts "[!] ".red.bold + "#{file_path}".underline + ": No such file!"
       end
     end
 

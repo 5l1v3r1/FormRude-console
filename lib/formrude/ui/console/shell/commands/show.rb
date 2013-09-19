@@ -86,7 +86,6 @@ module Commands
       return frows
     end
 
-
     #
     # Just what the command use to do
     #
