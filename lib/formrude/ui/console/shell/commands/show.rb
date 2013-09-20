@@ -90,7 +90,7 @@ module Commands
     #
     # Just what the command use to do
     #
-    def action(current_context, cmd_arg=nil)
+    def action(cmd_arg=nil, current_context)
       self.current_context = current_context
 
       tables =
@@ -115,6 +115,7 @@ module Commands
       if cmd_arg == "#{cmd_arg}"
         puts tables["#{cmd_arg}"]
       else
+        # TODO: Check the current_context then show what we are in
         cmd_arg = current_context
         puts tables["#{cmd_arg}"]
       end
