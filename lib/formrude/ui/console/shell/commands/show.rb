@@ -112,12 +112,13 @@ module Commands
                   :rows     => show_full)
           }
 
-      if cmd_arg == "#{cmd_arg}"
-        puts tables["#{cmd_arg}"]
+      if tables.keys.include? cmd_arg
+        puts tables[cmd_arg]
       else
+        puts "Check the current_context then show what we are in"
         # TODO: Check the current_context then show what we are in
-        cmd_arg = current_context
-        puts tables["#{cmd_arg}"]
+        p cmd_arg = current_context
+        #puts tables["#{cmd_arg}"]
       end
 
     end
