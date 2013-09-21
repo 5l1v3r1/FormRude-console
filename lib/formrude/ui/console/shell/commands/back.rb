@@ -40,8 +40,7 @@ module Commands
     # Just what the command use to do
     #
     def action(path = nil)
-      puts "See you soon ;)\n\n"
-      exit
+      puts "back command\n\n"
     end
   end # Back
 
